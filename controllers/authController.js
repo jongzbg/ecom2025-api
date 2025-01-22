@@ -48,7 +48,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body
-
+        console.log('email', email)
         // Step 1 Check Email
         const user = await prisma.user.findFirst({
             where: {
@@ -75,7 +75,7 @@ exports.login = async (req, res) => {
             expiresIn: '1d'
         }, (err, token) => {
             if (err) {
-                return res.staaaaeetus(500).json({ message: "Server Error Payload Env" })
+                return res.status(500).json({ message: "Server Error Payload Env" })
             }
             res.json({ payload, token })
         })
