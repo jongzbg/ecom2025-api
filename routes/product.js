@@ -4,7 +4,7 @@ const router = express.Router()
 // Controllers
 const { create, list, read, update, remove, listby, searchFilters,createImages,removeImage } = require('../controllers/productController')
 const { authCheck, adminCheck } = require('../middleware/authCheck')
-// @ENDPONT http://localhost:5001/product
+// @ENDPONT https://ecom2025-nine.vercel.app/product
 // router.get('/product', (req, res) => {
 //     res.send('hello product')
 // })
