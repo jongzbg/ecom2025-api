@@ -99,7 +99,6 @@ exports.currentUser = async (req, res) => {
                 role: true
             }
         })
-        console.log('user',user)
         res.json({ user })
     } catch (err) {
         console.log(err)
