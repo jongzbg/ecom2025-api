@@ -43,5 +43,10 @@ readdirSync('./routes')
 
 // Step 2 Start Server
 app.listen('5001', () => {
-    console.log('Server is running on port 5001')
+    // console.log('Server is running on port 5001')
+    console.log(`API Listening on PORT 5001`)
+})
+
+app.get('/',(req,res) =>{
+    res.send('This is my API')
 })
