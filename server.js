@@ -15,10 +15,13 @@ app.use(express.json({limit:'20mb'}))
 // app.use(cors())
 app.use(
     cors({
-      origin: 'https://ecom2025-nine.vercel.app',
-      credentials: true,
+        origin: [
+            'https://ecom2025-nine.vercel.app', // Production URL
+            'http://localhost:5173' // Localhost for development
+        ],
+        credentials: true,
     })
-  );
+);
 // Step 3 Router
 // comment authRouter,categoryRouter because using readdirSync
 // app.post('/api', (req, res) => {
