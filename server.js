@@ -12,7 +12,11 @@ const cors = require('cors')
 // middleware
 app.use(morgan('dev'))
 app.use(express.json({limit:'20mb'}))
-app.use(cors())
+// app.use(cors())
+app.use(cors({
+    origin: ['http://localhost:5173', 'https://ecom2025-nine.vercel.app'], // Allow both local dev and production
+    credentials: true, // Allow cookies, if applicable
+  }));
 // Step 3 Router
 // comment authRouter,categoryRouter because using readdirSync
 // app.post('/api', (req, res) => {
