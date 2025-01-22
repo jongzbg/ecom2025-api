@@ -2,7 +2,7 @@
 .vercel/
 
 # Ignore environment variable files
-.env
+# .env
 
 # Ignore node_modules directory
 node_modules/
