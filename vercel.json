@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "ecom",
+  "name": "ecom2025",
   "builds": [
     {
       "src": "server.js",
