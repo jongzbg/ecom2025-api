@@ -48,7 +48,7 @@ exports.register = async (req, res) => {
 exports.login = async (req, res) => {
     try {
         const { email, password } = req.body
-        console.log('email', email)
+
         // Step 1 Check Email
         const user = await prisma.user.findFirst({
             where: {
@@ -99,6 +99,7 @@ exports.currentUser = async (req, res) => {
                 role: true
             }
         })
+        console.log('user',user)
         res.json({ user })
     } catch (err) {
         console.log(err)
