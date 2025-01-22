@@ -12,16 +12,7 @@ const cors = require('cors')
 // middleware
 app.use(morgan('dev'))
 app.use(express.json({limit:'20mb'}))
-// app.use(cors())
-app.use(
-    cors({
-        origin: [
-            'https://ecom2025-nine.vercel.app', // Production URL
-            'http://localhost:5173' // Localhost for development
-        ],
-        credentials: true,
-    })
-);
+app.use(cors())
 // Step 3 Router
 // comment authRouter,categoryRouter because using readdirSync
 // app.post('/api', (req, res) => {
@@ -43,10 +34,5 @@ readdirSync('./routes')
 
 // Step 2 Start Server
 app.listen('5001', () => {
-    // console.log('Server is running on port 5001')
-    console.log(`API Listening on PORT 5001`)
-})
-
-app.get('/',(req,res) =>{
-    res.send('This is my API')
+    console.log(`Server is running on port 5001`)
 })
