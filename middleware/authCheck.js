@@ -36,7 +36,7 @@ exports.authCheck = async (req, res, next) => {
 exports.adminCheck = async (req, res, next) => {
     try {
         const { email } = req.user
-        console.log("Admin Check", email)
+        // console.log("Admin Check", email)
         const adminUser = await prisma.user.findFirst({
             where: { email: email }
         })
