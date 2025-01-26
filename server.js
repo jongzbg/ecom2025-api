@@ -17,7 +17,7 @@ app.use(
     cors({
         origin: [
             // 'https://ecom2025-nine.vercel.app', // Production URL
-            'https://ecom2025-web.vercel.app/login',
+            'https://ecom2025-web.vercel.app',
             'http://localhost:5173' // Localhost for development
         ],
         credentials: true,
